@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Matches</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-2xl overflow-hidden relative">
+    <!-- Notch -->
+    <div class="bg-black w-24 h-6 rounded-b-lg absolute top-0 left-1/2 transform -translate-x-1/2 z-10"></div>
+
+    <!-- Matches Page Content -->
+    <div class="p-4 pt-10 relative h-full flex flex-col">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-xl font-bold">Matches</h1>
+        <a href="index.html" class="text-blue-500 text-sm">Back</a>
+      </div>
+
+      <!-- Matched Users -->
+      <div class="space-y-4 overflow-y-auto">
+
+        <!-- Match 1 -->
+        <div class="bg-gray-100 p-4 rounded-xl flex items-center">
+          <img src="https://randomuser.me/api/portraits/women/44.jpg" class="w-16 h-16 rounded-full object-cover mr-4" alt="Emily"/>
+          <div>
+            <h2 class="font-semibold text-lg">Emily R.</h2>
+            <p class="text-sm text-gray-500">New York City • $1200/mo</p>
+          </div>
+          <a href="profile.html" class="ml-auto text-blue-500 text-sm">View</a>
+        </div>
+
+        <!-- Match 2 -->
+        <div class="bg-gray-100 p-4 rounded-xl flex items-center">
+          <img src="https://randomuser.me/api/portraits/men/36.jpg" class="w-16 h-16 rounded-full object-cover mr-4" alt="Mark"/>
+          <div>
+            <h2 class="font-semibold text-lg">Mark D.</h2>
+            <p class="text-sm text-gray-500">Chicago • $1100/mo</p>
+          </div>
+          <a href="mark.html" class="ml-auto text-blue-500 text-sm">View</a>
+        </div>
+
+        <!-- Add more matches here -->
+        <div class="bg-white border-t p-3 flex justify-around text-sm">
+            <a href="index.html" class="text-gray-500">Home</a>
+            <a href="matches.html" class="text-blue-500 font-bold">Matches</a>
+            <a href="my-profile.html" class="text-gray-500">Profile</a>
+          </div>
+          
+      </div>
+
+      <!-- Optional: Empty State -->
+      <!--
+      <div class="flex flex-col items-center justify-center text-center mt-20 text-gray-500">
+        <p class="text-lg font-medium">No matches yet</p>
+        <p class="text-sm">Start connecting with roommates to see matches here.</p>
+      </div>
+      -->
+
+    </div>
+  </div>
+
+</body>
+</html>

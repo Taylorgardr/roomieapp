@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Profile</title>
+   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-[375px] min-h-[812px] bg-white rounded-[40px] shadow-2xl relative">
+    <!-- Notch -->
+    <div class="bg-black w-24 h-6 rounded-b-lg absolute top-0 left-1/2 transform -translate-x-1/2 z-10"></div>
+
+    <!-- Profile Page Content -->
+    <div class="p-4 pt-10 relative flex flex-col h-full">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between mb-6">
+        <h1 class="text-xl font-bold">My Profile</h1>
+        <a href="index.html" class="text-blue-500 text-sm">Back</a>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="flex flex-col items-center text-center mb-4">
+        <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Me" class="w-32 h-32 rounded-full object-cover mb-2"/>
+        <h2 class="text-2xl font-semibold">You (Alex J.)</h2>
+        <p class="text-sm text-gray-500">San Francisco, CA</p>
+      </div>
+
+      <!-- Editable Fields -->
+      <div class="space-y-4 text-sm text-gray-700">
+        <div>
+          <label class="block text-sm font-medium mb-1">Bio</label>
+          <textarea class="w-full p-3 border rounded-xl resize-none" rows="3">Creative professional moving to SF soon. I value cleanliness, communication, and shared responsibilities.</textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Preferences</label>
+          <textarea class="w-full p-3 border rounded-xl resize-none" rows="3">Non-smoker, pet-friendly, no loud music at night.</textarea>
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Monthly Budget</label>
+          <input type="text" class="w-full p-3 border rounded-xl" value="$1200–$1600" />
+        </div>
+
+        <div>
+          <label class="block text-sm font-medium mb-1">Location Preference</label>
+          <input type="text" class="w-full p-3 border rounded-xl" value="San Francisco Bay Area" />
+        </div>
+      </div>
+
+      <!-- Save Button -->
+      <div class="mt-auto pt-6">
+        <button class="w-full bg-blue-500 text-white py-3 rounded-full text-lg font-medium">Save Changes</button>
+      </div>
+      
+    </div>
+
+    <!-- Bottom Navigation -->
+    <div class="bg-white border-t p-3 flex justify-around text-sm">
+      <a href="index.html" class="text-gray-500">Home</a>
+      <a href="matches.html" class="text-gray-500">Matches</a>
+      <a href="my-profile.html" class="text-blue-500 font-bold">Profile</a>
+    </div>
+    
+  </div>
+
+</body>
+</html>

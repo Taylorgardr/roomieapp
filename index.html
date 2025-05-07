@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Find a Roommate</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .card {
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-2xl overflow-hidden relative flex flex-col">
+
+    <!-- Notch -->
+    <div class="bg-black w-24 h-6 rounded-b-lg absolute top-0 left-1/2 transform -translate-x-1/2 z-10"></div>
+
+    <!-- Header -->
+    <div class="p-4 pt-10 flex justify-between items-center">
+      <h1 class="text-xl font-bold">RoomieFinder</h1>
+    </div>
+
+    <!-- Cards Container -->
+    <div id="card-container" class="flex-1 flex items-center justify-center relative overflow-hidden px-4">
+      <!-- Cards will be injected here -->
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="p-4 flex justify-around">
+      <button onclick="pass()" class="bg-gray-200 w-16 h-16 rounded-full text-xl">👎</button>
+      <button onclick="like()" class="bg-blue-500 text-white w-16 h-16 rounded-full text-xl">❤️</button>
+    </div>
+
+    <!-- Bottom Navigation -->
+    <!-- Bottom Navigation -->
+    <div class="bg-white border-t p-3 flex justify-around text-sm">
+        <a href="index.html" class="text-blue-500 font-bold">Home</a>
+        <a href="matches.html" class="text-gray-500">Matches</a>
+        <a href="my-profile.html" class="text-gray-500">Profile</a>
+      </div>      
+  </div>
+
+  <script>
+    const profiles = [
+      {
+        name: "Emily R.",
+        location: "New York City",
+        budget: "$1200/mo",
+        img: "https://randomuser.me/api/portraits/women/44.jpg",
+        link: "profile.html"
+      },
+      {
+        name: "Mark D.",
+        location: "Chicago",
+        budget: "$1100/mo",
+        img: "https://randomuser.me/api/portraits/men/36.jpg",
+        link: "mark.html"
+      },
+      {
+        name: "Sophie L.",
+        location: "Los Angeles",
+        budget: "$1350/mo",
+        img: "https://randomuser.me/api/portraits/women/65.jpg",
+        link: "#"
+      }
+    ];
+
+    let currentIndex = 0;
+
+    function renderProfile(index) {
+      const container = document.getElementById("card-container");
+      container.innerHTML = "";
+
+      if (index >= profiles.length) {
+        container.innerHTML = `
+          <div class="text-center text-gray-500">
+            <h2 class="text-lg font-semibold mb-2">No more profiles</h2>
+            <p>Check back later!</p>
+          </div>
+        `;
+        return;
+      }
+
+      const profile = profiles[index];
+      const card = document.createElement("div");
+      card.className = "card absolute w-full max-w-sm bg-white p-6 rounded-2xl shadow-md text-center z-10";
+      card.innerHTML = `
+        <img src="${profile.img}" class="w-32 h-32 rounded-full object-cover mx-auto mb-4" />
+        <h2 class="text-2xl font-bold">${profile.name}</h2>
+        <p class="text-gray-500 text-sm">${profile.location}</p>
+        <p class="text-sm mt-2">${profile.budget}</p>
+        <a href="${profile.link}" class="inline-block mt-4 text-blue-500 text-sm">View Profile</a>
+      `;
+      container.appendChild(card);
+    }
+
+    function like() {
+      console.log("Liked:", profiles[currentIndex].name);
+      nextProfile();
+    }
+
+    function pass() {
+      console.log("Passed:", profiles[currentIndex].name);
+      nextProfile();
+    }
+
+    function nextProfile() {
+      const card = document.querySelector(".card");
+      if (card) {
+        card.style.transform = "translateX(-100%)";
+        card.style.opacity = "0";
+      }
+      setTimeout(() => {
+        currentIndex++;
+        renderProfile(currentIndex);
+      }, 300);
+    }
+
+    renderProfile(currentIndex);
+  </script>
+</body>
+</html>

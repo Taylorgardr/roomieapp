@@ -1,0 +1,46 @@
+/* Ensure the page takes at least full height of the viewport */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif; /* You can specify any font here */
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.content {
+  flex-grow: 1;
+  overflow-y: auto; /* Allow scrolling if content overflows */
+  padding-bottom: 50px; /* To prevent content from being hidden under the bottom nav */
+}
+
+.bottom-nav {
+  background-color: white;
+  border-top: 1px solid #ddd;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-around;
+  font-size: 14px;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.bottom-nav a {
+  text-decoration: none;
+  color: #4b5563;
+  transition: color 0.3s ease;
+}
+
+.bottom-nav a.active {
+  color: #3b82f6; /* Highlight the active page link */
+  font-weight: bold;
+}
+
+.bottom-nav a:hover {
+  color: #3b82f6; /* Change color on hover for better user interaction */
+}

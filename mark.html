@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Roommate Profile - Mark D.</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <div class="w-[375px] h-[812px] bg-white rounded-[40px] shadow-2xl overflow-hidden relative">
+    <!-- Notch -->
+    <div class="bg-black w-24 h-6 rounded-b-lg absolute top-0 left-1/2 transform -translate-x-1/2 z-10"></div>
+
+    <!-- Profile Page Content -->
+    <div class="p-4 pt-10 relative h-full flex flex-col">
+
+      <!-- Header -->
+      <div class="flex items-center space-x-4 mb-6">
+        <a href="index.html" class="text-gray-600">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+          </svg>
+        </a>
+        <h1 class="text-xl font-bold">Mark D.</h1>
+      </div>
+
+      <!-- Profile Picture -->
+      <div class="flex flex-col items-center text-center mb-4">
+        <img src="https://randomuser.me/api/portraits/men/36.jpg" alt="Mark" class="w-32 h-32 rounded-full object-cover mb-2"/>
+        <h2 class="text-2xl font-semibold">Mark D.</h2>
+        <p class="text-sm text-gray-500">Chicago, IL</p>
+      </div>
+
+      <!-- Info Sections -->
+      <div class="space-y-4 text-sm text-gray-700">
+        <div class="bg-gray-100 p-4 rounded-xl">
+          <h3 class="font-semibold mb-1">About Me</h3>
+          <p>Hi! I'm Mark, a graphic designer working remotely. I enjoy minimalist living, staying organized, and cooking on weekends. I'm looking for someone quiet and respectful.</p>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-xl">
+          <h3 class="font-semibold mb-1">Preferences</h3>
+          <ul class="list-disc list-inside">
+            <li>Quiet environment</li>
+            <li>No pets</li>
+            <li>Non-smoker</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-100 p-4 rounded-xl">
+          <h3 class="font-semibold mb-1">Budget</h3>
+          <p>$1000–$1300/month</p>
+        </div>
+      </div>
+
+      <!-- Message Button -->
+      <div class="mt-auto pt-6">
+        <button class="w-full bg-blue-500 text-white py-3 rounded-full text-lg font-medium"><a href="message.html" class="bg-blue-500 text-white px-4 py-2 rounded-full mt-4 inline-block">Send Message</a>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
